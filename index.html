@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A beginner-friendly, interactive JavaScript tutorial with lessons, quizzes, and a Tryit editor.">
+  <meta name="theme-color" content="#0b1120">
+  <title>Projectx | Interactive JavaScript Learning</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#appContent">Skip to lesson content</a>
+  <header class="site-header">
+    <div class="top-navigation">
+      <button id="sidebarToggle" class="icon-button mobile-only" type="button" aria-expanded="false" aria-controls="lessonSidebar" aria-label="Open lesson navigation">☰</button>
+      <a class="brand" href="index.html" aria-label="Projectx home">PROJECTX</a>
+      <label class="global-search">
+        <span class="visually-hidden">Search lessons</span>
+        <input id="globalSearch" type="search" placeholder="Search 54 lessons..." autocomplete="off">
+        <kbd>/</kbd>
+      </label>
+      <nav class="top-links" aria-label="Main navigation">
+        <a href="?view=home" data-view="home">Tutorial</a>
+        <a href="?view=projects" data-view="projects">Projects</a>
+        <a href="?view=practice" data-view="practice">Practice</a>
+        <a href="?view=visualizer" data-view="visualizer">Labs</a>
+        <a href="?view=tryit" data-view="tryit">Tryit</a>
+      </nav>
+      <button id="themeToggle" class="theme-toggle" type="button" aria-label="Switch color theme">🌙 Dark</button>
+    </div>
+  </header>
+
+  <div class="site-layout">
+    <aside id="lessonSidebar" class="sidebar" aria-label="JavaScript lesson navigation">
+      <div class="sidebar-heading">
+        <h2>JavaScript Tutorial</h2>
+        <span id="sidebarProgress" class="sidebar-progress">0 of 54 complete</span>
+      </div>
+      <label class="sidebar-search">
+        <span class="visually-hidden">Filter the lesson list</span>
+        <input id="sidebarSearch" type="search" placeholder="Filter lessons">
+      </label>
+      <nav id="lessonNavigation" class="lesson-navigation"></nav>
+    </aside>
+
+    <main id="appContent" class="main-content" tabindex="-1">
+      <div class="loading-state" role="status">Loading JavaScript lessons…</div>
+    </main>
+  </div>
+
+  <div id="sidebarBackdrop" class="sidebar-backdrop" hidden></div>
+  <div id="statusMessage" class="status-message" role="status" aria-live="polite"></div>
+  <footer class="site-footer">
+    <p>Learn at your own pace. Read a lesson, try the example, and build something of your own.</p>
+  </footer>
+  <script src="lessons.js"></script>
+  <script src="projects.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
